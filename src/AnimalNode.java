@@ -1,24 +1,20 @@
-/**
- * Creates a Question node with a parent, yes, and no branch.
- * Also holds the question for the node.
- * @author Jackie
- *
- */
-public class QuestionNode extends Node{
+
+public class AnimalNode extends Node{
 	
-	private String question;
+	private String animal;
+	
 	
 	/** Basic Constructor, sets the question and leaves parent null*/
-	public QuestionNode(String question){
-		this.question = question;
+	public AnimalNode(String animal){
+		this.animal = animal;
 		this.parent = null;
 		this.yes = null;
 		this.no = null;
 	}
 	
 	/** Constructor that sets the question and the parent Node */
-	public QuestionNode(String question, Node parent){
-		this.question = question;
+	public AnimalNode(String animal, Node parent){
+		this.animal = animal;
 		this.parent = parent;
 		this.yes = null;
 		this.no = null;
@@ -28,7 +24,7 @@ public class QuestionNode extends Node{
 	/** @return question for this node */
 	@Override
 	public String getQuestion() {
-		return question;
+		return "Are you thinking of a " + animal + "?";
 	}
 
 	/** Sets the yes node to the given node
@@ -79,15 +75,12 @@ public class QuestionNode extends Node{
 
 	@Override
 	public String geAnimal() {
-		// TODO Auto-generated method stub
-		return null;
+		return animal;
 	}
 
 	@Override
 	public Node getParent() {
 		return this.parent;
 	}
-	
-	
 
 }
